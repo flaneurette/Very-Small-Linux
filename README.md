@@ -1,2 +1,7 @@
 # Very-Small-Linux
 A very tiny linux img to launch a binary after boot
+
+About 14MB, the image will be about 40MB for extra padding, sometimes required for proper booting.
+
+The script fetches Linux kernel, a few required packages and creates a bootable .img for UEFI USB sticks.
+
