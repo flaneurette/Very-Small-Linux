@@ -59,6 +59,6 @@ Ventoy: https://www.ventoy.net/en/index.html
 ### 5. **Output**
    - Produces `.img` ready to flash to USB
    - Size: ~40MB (minimal footprint)
-   - Boot time: ~5-10 seconds
+   - Boot time: ~3-5 seconds
      
 ---
