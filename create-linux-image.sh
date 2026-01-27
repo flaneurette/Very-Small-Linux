@@ -26,7 +26,7 @@ echo "============================================"
 sudo apt-get update
 sudo apt-get install -y \
     wget build-essential bc flex bison \
-    libelf-dev libssl-dev parted dosfstools \
+    libelf-dev gcc libssl-dev parted dosfstools \
     cpio gzip grub-efi-amd64-bin grub-common
 
 echo "============================================"
@@ -384,7 +384,6 @@ int main() {
 }
 INITEOF
 
-
 gcc -static "$WORK_DIR/init.c" -o "$ROOTFS/init"
 chmod +x "$ROOTFS/init"
 
@@ -639,5 +638,4 @@ echo "Image: $USB_IMAGE"
 echo "Size: $(du -h $USB_IMAGE | cut -f1)"
 echo ""
 echo "Test: qemu-system-x86_64 -bios /usr/share/ovmf/OVMF.fd -drive file=$USB_IMAGE,format=raw -m 256M"
-echo "USB:  sudo dd if=$USB_IMAGE of=/dev/sdX bs=4M status=progress"
 echo "============================================"
