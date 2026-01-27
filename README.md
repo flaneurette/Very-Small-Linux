@@ -6,6 +6,8 @@ About 14MB, the image will be about 40MB for extra padding, sometimes required f
 
 The script fetches Linux kernel, a few required packages and creates a bootable .img for UEFI USB sticks.
 
+When the .img is booted, a simple binary loads.
+
 # Binary
 
 The `reader` binary is a simple file reader that reads the USB stick.
