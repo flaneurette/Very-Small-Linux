@@ -29,3 +29,36 @@ The .sh script automatically copies it over into /root/reader (do not do this ma
 The .img **must** be placed an a USB stick with `Ventoy` installed.
 
 Ventoy: https://www.ventoy.net/en/index.html
+
+---
+
+# Build Script Overview
+
+### 1. **Downloads & Compiles Linux Kernel (6.6.8)**
+   - Configured for UEFI boot support
+   - Includes filesystem drivers: exFAT, VFAT, NTFS, ext4
+   - Enables Ventoy compatibility (device-mapper support)
+   - Removes unnecessary features (sound, wireless, etc.) to minimize size
+
+### 2. **Creates Custom Init System**
+   - Compiles a static C program that runs at boot
+   - Automatically detects and mounts USB drives
+   - Searches for `E-USB.conf` marker file
+   - Launches the reader application when found
+
+### 3. **Builds Initial RAM Filesystem (initramfs)**
+   - Includes the reader binary
+   - Creates minimal directory structure
+
+### 4. **Generates Bootable Image**
+   - Creates GPT partition table
+   - Formats EFI system partition (FAT32)
+   - Installs systemd-boot bootloader
+   - Copies kernel and boot configuration
+
+### 5. **Output**
+   - Produces `.img` ready to flash to USB
+   - Size: ~40MB (minimal footprint)
+   - Boot time: ~5-10 seconds
+     
+---
