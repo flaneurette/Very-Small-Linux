@@ -4,14 +4,14 @@ set -e
 trap 'echo "ERROR at line $LINENO: Command failed"' ERR
 
 # Configuration
-WORK_DIR="$HOME/EMERGENCY-READER-IMG/image"
+WORK_DIR="$HOME/image"
 SRC_DIR="$WORK_DIR/source"
 ROOTFS="$WORK_DIR/rootfs"
-USB_IMAGE="$WORK_DIR/EMERGENCY-READER.img"
+USB_IMAGE="$WORK_DIR/Very-Small-Linux.img"
 KERNEL_VERSION="6.6.8"
 KERNEL_URL="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-${KERNEL_VERSION}.tar.xz"
 # Your binary that open when the ISO loads.
-READER_BINARY="$HOME/EMERGENCY-READER-IMG/reader" 
+READER_BINARY="$HOME/reader" 
 
 NUM_JOBS=$(nproc)
 
@@ -134,7 +134,7 @@ int main() {
     
     printf("\n");
     printf("==========================================\n");
-    printf("   EMERGENCY READER BOOT SYSTEM v1.0\n");
+    printf("   VERY SMALL LINUX BOOT SYSTEM v1.0\n");
     printf("==========================================\n");
     flush_output();
     
@@ -392,7 +392,6 @@ echo "============================================"
 echo "Copying your reader binary"
 echo "============================================"
 
-
 if [ -f "$READER_BINARY" ]; then
     sudo cp "$READER_BINARY" "$ROOTFS/root/reader"
     sudo chmod +x "$ROOTFS/root/reader"
@@ -533,9 +532,6 @@ KCONFIG
 
 make olddefconfig
 
-
-make olddefconfig
-
 echo ""
 echo "============================================"
 echo "VERIFYING EFI CONFIGURATION:"
@@ -606,7 +602,7 @@ cat > "$GRUB_TEMP/boot/grub/grub.cfg" << 'GRUBEOF'
 set timeout=1
 set default=0
 
-menuentry "EMERGENCY READER Linux" {
+menuentry "VERY SMALL Linux" {
     linux (memdisk)/boot/vmlinuz quiet console=ttyS0 console=tty0
     initrd (memdisk)/boot/initramfs.gz
 }
