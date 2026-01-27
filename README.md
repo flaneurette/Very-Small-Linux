@@ -5,3 +5,5 @@ About 14MB, the image will be about 40MB for extra padding, sometimes required f
 
 The script fetches Linux kernel, a few required packages and creates a bootable .img for UEFI USB sticks.
 
+The .img **must** be placed an a USB stick with `Ventoy`.
+
