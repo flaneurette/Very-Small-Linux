@@ -63,24 +63,24 @@ Ventoy: https://www.ventoy.net/en/index.html
      
 ---
 ```
-╔═══════════════════════════════════════════════════════╗
-║                                                       ║
-║          OFFICIAL NERD CERTIFICATION                  ║
-║                                                       ║
-║  This certifies that the bearer has:                  ║
-║                                                       ║
-║  Compiled a Linux kernel from source                  ║
-║  Debugged boot failures at 3 AM                       ║
-║  Understood what "initramfs" actually means           ║
-║  Fixed makedev() with sys/sysmacros.h                 ║
-║  Survived 107 reboots without rage-quitting           ║
-║  Can now explain UEFI boot to mortals                 ║
-║                                                       ║
-║  Level: KERNEL WIZARD                                 ║
-║  XP Gained: 12 hours                                  ║
-║                                                       ║
-║  Signed: Linus Torvalds (in spirit)                   ║
-║  Date: Today                                          ║
-║                                                       ║
-╚═══════════════════════════════════════════════════════╝
+╔═══════════════════════════════════════════════════╗
+║                                                   ║
+║          OFFICIAL NERD CERTIFICATION              ║
+║                                                   ║
+║  This certifies that the bearer has:              ║
+║                                                   ║
+║  Compiled a Linux kernel from source              ║
+║  Debugged boot failures at 3 AM                   ║
+║  Understood what "initramfs" actually means       ║
+║  Fixed makedev() with sys/sysmacros.h             ║
+║  Survived 107 reboots without rage-quitting       ║
+║  Can now explain UEFI boot to mortals             ║
+║                                                   ║
+║  Level: KERNEL WIZARD                             ║
+║  XP Gained: 12 hours                              ║
+║                                                   ║
+║  Signed: Linus Torvalds (in spirit)               ║
+║  Date: Today                                      ║
+║                                                   ║
+╚═══════════════════════════════════════════════════╝
 ```
