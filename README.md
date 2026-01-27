@@ -26,7 +26,7 @@ The .sh script automatically copies it over into /root/reader (do not do this ma
 
 # USB img
 
-The .img **must** be placed an a USB stick with `Ventoy` installed.
+The .img **must** be placed on a USB stick with `Ventoy` installed.
 
 Ventoy: https://www.ventoy.net/en/index.html
 
