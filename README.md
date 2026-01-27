@@ -77,7 +77,7 @@ Ventoy: https://www.ventoy.net/en/index.html
 ║  Can now explain UEFI boot to mortals                 ║
 ║                                                       ║
 ║  Level: KERNEL WIZARD                                 ║
-║  XP Gained: 12 hours × ∞                              ║
+║  XP Gained: 12 hours                                  ║
 ║                                                       ║
 ║  Signed: Linus Torvalds (in spirit)                   ║
 ║  Date: Today                                          ║
