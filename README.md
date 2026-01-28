@@ -26,7 +26,7 @@ Less padding might work on some (embedded) systems, but it might also fail. Espe
 
 # Binary
 
-The `reader` binary is a simple file reader that reads the USB stick. It is a custom made terminal to read and brose files. It simply serves as an example as to how you could write a binary that loads upon boot.
+The `reader` binary is a simple file reader that reads the USB stick. It is a custom made terminal to read and browse files. It simply serves as an example as to how you could write a binary that loads upon boot.
 
 If you want to compile it yourself:
 
