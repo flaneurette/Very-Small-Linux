@@ -134,7 +134,7 @@ int main() {
     
     printf("\n");
     printf("==========================================\n");
-    printf("   VERY SMALL LINUX BOOT SYSTEM v1.0\n");
+    printf("VERY SMALL LINUX BOOT SYSTEM v1.0\n");
     printf("==========================================\n");
     flush_output();
     
@@ -265,9 +265,9 @@ int main() {
         printf("NO - Fixing permissions...\n");
         chmod("/root/reader", 0755);
         if (access("/root/reader", X_OK) == 0) {
-            printf("   Fixed successfully\n");
+            printf("Fixed successfully\n");
         } else {
-            printf("   FAILED to fix\n");
+            printf("FAILED to fix\n");
         }
     }
     
@@ -279,15 +279,15 @@ int main() {
     if (fp) {
         char line[256];
         while (fgets(line, sizeof(line), fp)) {
-            printf("   %s", line);
+            printf("%s", line);
         }
         pclose(fp);
     }
     
     struct stat st;
     if (stat("/root/reader", &st) == 0) {
-        printf("   Size: %ld bytes\n", st.st_size);
-        printf("   Mode: %o\n", st.st_mode & 0777);
+        printf("Size: %ld bytes\n", st.st_size);
+        printf("Mode: %o\n", st.st_mode & 0777);
     }
     
     // Check 4: Dynamic linking
@@ -299,14 +299,14 @@ int main() {
         char line[256];
         int has_libs = 0;
         while (fgets(line, sizeof(line), fp)) {
-            printf("   %s", line);
+            printf("%s", line);
             if (strstr(line, "=>") && !strstr(line, "statically linked")) {
                 has_libs = 1;
             }
         }
         pclose(fp);
         if (has_libs) {
-            printf("   WARNING: Binary appears to be dynamically linked!\n");
+            printf("WARNING: Binary appears to be dynamically linked!\n");
         }
     }
     
@@ -326,9 +326,9 @@ int main() {
     
     // Check 6: Environment
     printf("6. Environment variables:\n");
-    printf("   TERM=%s\n", getenv("TERM"));
-    printf("   HOME=%s\n", getenv("HOME"));
-    printf("   PATH=%s\n", getenv("PATH"));
+    printf("TERM=%s\n", getenv("TERM"));
+    printf("HOME=%s\n", getenv("HOME"));
+    printf("PATH=%s\n", getenv("PATH"));
     
     printf("\n=== ATTEMPTING EXECUTION ===\n");
     printf("Command: /root/reader /mnt\n");
