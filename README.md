@@ -22,6 +22,8 @@ These figures are estimates, it varies upon build. Expect a small Linux ISO or I
 | 32–40 MB     | Extra padding / alignment slack: Ensures sectors, partitions, and memory addresses meet bootloader and BIOS/UEFI expectations. Some firmware requires minimum size ranges.     |
 ```
 
+Less padding might work on some (embedded) systems, but it might also fail. Especially below 32MB.
+
 # Binary
 
 The `reader` binary is a simple file reader that reads the USB stick.
