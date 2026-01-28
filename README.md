@@ -15,11 +15,11 @@ These figures are estimates, it varies upon build. Expect a small **stable** Lin
 
 | Range        | Purpose                                                                                                                                                                        |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0–1 MB       | Boot area: Reserved for the bootloader (BIOS/UEFI). Contains GRUB or Syslinux, El Torito structures, and initial boot code. Must be aligned, can't overlap files.              |
-| 1–14 MB      | Minimal kernel: Compressed `vmlinuz` typically takes 10–14 MB. Needs to sit contiguously for the bootloader to load reliably.                                                  |
-| 14–23 MB     | Initramfs / initrd: Compressed image around 9 MB, but during early boot, bootloader loads it into memory as if it were larger (uncompressed). Needs contiguous space.          |
-| 23–32 MB     | Filesystem metadata + padding: ISO9660 / UDF / Rock Ridge directories, path tables, and file extents. Sector alignment inflates size.                                          |
-| 32–40 MB     | Extra padding / alignment slack: Ensures sectors, partitions, and memory addresses meet bootloader and BIOS/UEFI expectations. Some firmware requires minimum size ranges.     |
+| 0-1 MB       | Boot area: Reserved for the bootloader (BIOS/UEFI). Contains GRUB or Syslinux, El Torito structures, and initial boot code. Must be aligned, can't overlap files.              |
+| 1-14 MB      | Minimal kernel: Compressed `vmlinuz` typically takes 10-14 MB. Needs to sit contiguously for the bootloader to load reliably.                                                  |
+| 14-23 MB     | Initramfs / initrd: Compressed image around 9 MB, but during early boot, bootloader loads it into memory as if it were larger (uncompressed). Needs contiguous space.          |
+| 23-32 MB     | Filesystem metadata + padding: ISO9660 / UDF / Rock Ridge directories, path tables, and file extents. Sector alignment inflates size.                                          |
+| 32-40 MB     | Extra padding / alignment slack: Ensures sectors, partitions, and memory addresses meet bootloader and BIOS/UEFI expectations. Some firmware requires minimum size ranges.     |
 
 
 Less padding might work on some (embedded) systems, but it might also fail. Especially below 32MB.
