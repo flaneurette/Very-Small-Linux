@@ -10,7 +10,7 @@ When the .img is booted, a simple binary loads.
 
 # Filesize
 
-These figures are estimates, it varies upon build. Expect a small Linux ISO or IMG to be around 40MB.
+These figures are estimates, it varies upon build. Expect a small **stable** Linux ISO or IMG to be around 40MB.
 
 ```
 | Range        | Purpose                                                                                                                                                                        |
