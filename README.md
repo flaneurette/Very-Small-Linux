@@ -48,6 +48,17 @@ Ventoy: https://www.ventoy.net/en/index.html
 
 `E-USB.conf` **must** also be placed in the root of the USB stick. Linux init looks for this file: Currently, it simply looks for this file and does not read the config. But without it, Linux will not run. Later on, we can read settings and so on without having to recompile the binary.
 
+### USB layout
+
+Recommended, and required layout. The name of the image can be changed in the .sh build script.
+
+```
+/root
+│
+├── E-USB.conf
+└── Very-Small-Linux.img
+```
+
 ---
 
 # Build Script Overview
