@@ -73,7 +73,7 @@ void show_mounts() {
     if (f) {
         char line[256];
         while (fgets(line, sizeof(line), f)) {
-            printf("  %s", line);
+            printf("%s", line);
         }
         fclose(f);
     }
@@ -88,7 +88,7 @@ void show_devices() {
         while ((entry = readdir(dir)) != NULL) {
             if (strncmp(entry->d_name, "sd", 2) == 0 || 
                 strncmp(entry->d_name, "dm-", 3) == 0) {
-                printf("  /dev/%s\n", entry->d_name);
+                printf("/dev/%s\n", entry->d_name);
             }
         }
         closedir(dir);
@@ -103,7 +103,7 @@ void show_directory(const char *path) {
         struct dirent *entry;
         int count = 0;
         while ((entry = readdir(dir)) != NULL && count++ < 15) {
-            printf("  %s\n", entry->d_name);
+            printf("%s\n", entry->d_name);
         }
         closedir(dir);
     }
@@ -350,15 +350,15 @@ int main() {
     // If we reach here, exec failed
     printf("\n");
     printf("==========================================\n");
-    printf("  EXECUTION FAILED\n");
+    printf("EXECUTION FAILED\n");
     printf("==========================================\n");
     printf("\n");
     printf("Error number: %d\n", errno);
     printf("Error message: %s\n", strerror(errno));
     printf("\nCommon error codes:\n");
-    printf("  2  = ENOENT (No such file)\n");
-    printf("  8  = ENOEXEC (Invalid binary format)\n");
-    printf("  13 = EACCES (Permission denied)\n");
+    printf("2  = ENOENT (No such file)\n");
+    printf("8  = ENOEXEC (Invalid binary format)\n");
+    printf("13 = EACCES (Permission denied)\n");
     
     printf("\nBinary header (first 128 bytes):\n");
     flush_output();
