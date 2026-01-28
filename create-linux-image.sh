@@ -531,8 +531,6 @@ KCONFIG
 
 make olddefconfig
 
-make olddefconfig
-
 echo ""
 echo "============================================"
 echo "VERIFYING EFI CONFIGURATION:"
