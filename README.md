@@ -42,9 +42,11 @@ The .sh script automatically copies it over into /root/reader (do not do this ma
 
 # USB img
 
-The .img must be placed on a USB stick with `Ventoy` installed.
+The .img **must** be placed on a USB stick with `Ventoy` installed.
 
 Ventoy: https://www.ventoy.net/en/index.html
+
+`E-USB.conf` **must** also be placed in the root of the USB stick. Linux init looks for this file: Currently, it simply looks for this file and does not read the config. But wihtout it, Linux will not run. Later on, we can read settings and so on.
 
 ---
 
