@@ -1,6 +1,6 @@
 # Very-Small-Linux
 
-A very tiny linux distro img to launch a binary after boot.
+A very tiny GNU Linux distro img to launch a binary after boot.
 
 About 14MB, the image will be about 40MB for extra padding, sometimes required for proper booting.
 
